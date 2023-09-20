@@ -52,24 +52,22 @@
 
 <pre><code>https://github.com/PedroAugusto2101/Newton_ADS/tree/main/3%C2%BA%20Semestre/LP/projeto_lotofacil</code></pre>
 
-<ol start="3">
+<ol start="2">
     <li>Abra o link</li>
 </ol>
 
-<ol start="4">
+<ol start="3">
     <li>Compile o código-fonte Java</li>
 </ol>
 
-<ol start="5">
+<ol start="4">
     <li>Execute o programa em sua IDE</li>
 </ol>
 
-<ol start="6">
+<ol start="5">
     <li>Siga as instruções no terminal.</li>
 </ol>
-    <li><code>java.util.Random</code>: Utilizada para gerar números aleatórios.</li>
-</ul>
 
-<p>Este projeto foi desenvolvido com base nas bibliotecas padrão do Java SE 8.</p>
+</ul>
 
 
