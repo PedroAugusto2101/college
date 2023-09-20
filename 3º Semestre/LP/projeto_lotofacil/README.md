@@ -15,7 +15,6 @@
 
 <ul>
     <li><strong>Menu Interativo:</strong> O sistema possui um menu interativo implementado com estruturas <code>switch</code> e <code>do-while</code>. O usuário pode escolher entre três modalidades de apostas ou sair do programa.</li>
-
     <li><strong>Aposta de 0 a 100:</strong>
         <ul>
             <li>O jogador pode apostar um número inteiro de 0 a 100.</li>
@@ -25,7 +24,6 @@
             <li>Se o jogador errar, o sistema exibe "Que pena! O número sorteado foi: X."</li>
         </ul>
     </li>
-
     <li><strong>Aposta de A à Z:</strong>
         <ul>
             <li>O jogador pode apostar uma letra de A a Z, que pode ser digitada em maiúscula ou minúscula.</li>
@@ -35,7 +33,6 @@
             <li>Se o jogador errar, o sistema exibe "Que pena! A letra sorteada foi: X."</li>
         </ul>
     </li>
-
     <li><strong>Aposta de Número Par ou Ímpar:</strong>
         <ul>
             <li>O jogador pode apostar um número inteiro.</li>
