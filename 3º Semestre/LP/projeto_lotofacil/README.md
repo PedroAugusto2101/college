@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotofácil Java - Jogo de Loteria Simples</title>
-</head>
-<body>
-
 <h1>Lotofácil Java - Jogo de Loteria Simples</h1>
 
 <p>Este é um projeto simples em Java que implementa um jogo de loteria chamado Lotofácil. O sistema permite aos jogadores fazerem apostas em três modalidades diferentes: de 0 a 100, de A à Z e em número par ou ímpar. O programa roda no terminal, lê entradas dos jogadores e exibe os resultados das apostas de acordo com as regras da loteria.</p>
@@ -80,5 +71,3 @@
 
 <p><strong>Nota:</strong> Este é um projeto de exemplo simples para fins educacionais. Você pode personalizá-lo e adicionar mais recursos, como armazenar histórico de jogos, melhorar a interface do usuário ou criar um mecanismo de premiação mais complexo.</p>
 
-</body>
-</html>
