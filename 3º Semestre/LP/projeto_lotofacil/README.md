@@ -50,7 +50,7 @@
     <li>Java instalado em sua máquina.</li>
 </ol>
 
-<pre><code>git clone https://github.com/PedroAugusto2101/Newton_ADS/tree/main/3%C2%BA%20Semestre/LP/projeto_lotofacil</code></pre>
+<pre><code>https://github.com/PedroAugusto2101/Newton_ADS/tree/main/3%C2%BA%20Semestre/LP/projeto_lotofacil</code></pre>
 
 <ol start="3">
     <li>Abra o link</li>
