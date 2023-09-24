@@ -1,0 +1,5 @@
+
+1. Instale o Power Design seguindo o passo a passo do procedimento que disponibilizei.
+
+2. Copie o conteúdo da pasta CRACK para a pasta do seu computador 
+"C:\Program Files (x86)\Sybase\PowerDesigner 16" substituindo o arquivo existente nesta pasta

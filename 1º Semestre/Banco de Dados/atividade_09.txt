@@ -1,0 +1,64 @@
+1)
+select nom_func, dta_nascimento
+from funcionario
+where val_salario between 2000 and 3000
+order by dta_nascimento;
+
+2)
+select nom_dependente, dta_nascimento
+from dependente
+where des_sexo = 'F'
+and dta_nascimento > '2000-01-01';
+
+3)
+select *
+from pedido
+where (dta_pedido between '2022-01-01' and '2022-12-31')
+or val_pedido < 2000
+order by cod_pedido;
+
+4)
+select nom_func, dta_admissao
+from funcionario
+where (dta_admissao between '2000-01-01'
+and '2019-12-31')
+and cod_func_supervisor is null
+order by dta_admissao;
+
+5)
+select *
+from projeto
+where dta_fim is null
+and cod_func_coordenador is not null;
+
+6)
+select *
+from dependente
+where dta_nascimento >= '2000-01-01'
+and nom_dependente '%silva%'
+order by dta_nascimento;
+
+7)
+select *
+from pedido
+where datediff(now(), dta_pedido) < 1825;
+
+8)
+select *
+from funcionario
+where (datediff(now(), dta_admissao) > 1825)
+and (cod_func_supervisor is null)
+and (val_salario between 2000 and 5000)
+order by dta_nascimento desc;
+
+9)
+select *
+from dependente
+where datediff(now(), dta_nascimento) > 6205;
+
+10)
+select nom_func, val_salario as 'Salário Atual', (val_salario * 1.1) as 'Salário Reajustado'
+from funcionario
+where cod_cargo in (1)
+and (val_salario * 1.1) > 2000;
+

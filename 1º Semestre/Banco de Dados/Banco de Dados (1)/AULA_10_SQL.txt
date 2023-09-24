@@ -1,0 +1,91 @@
+-- SQL - DQL - LINGUAGEM DE CONSULTA A DADOS
+
+USE bd_rh;
+
+# Funçoes YEAR(), MONTH(), DAY()
+
+SELECT Nom_Func, Dta_Nascimento, YEAR(Dta_Nascimento) Ano, MONTH(Dta_Nascimento) Mês, DAY(Dta_Nascimento) Dia
+FROM Funcionario
+ORDER BY Dta_Nascimento DESC;
+
+# Mostre os projetos não finalizados que foram iniciados entre 2001 e 2005
+SELECT *
+FROM projeto
+WHERE DTA_FIM IS NULL
+AND YEAR(DTA_INICIO) BETWEEN 2001 AND 2005;
+
+-- Fazer o exercício
+
+# OPERADORES DE JUNÇÃO DE TABELAS: INNER JOIN x LEFT OUTER JOIN x RIGHT OUTER JOIN  
+
+# INNER JOIN
+
+# Recupere o nome do funcionario e o cargo que possui. Mostre somente os funcionários que tenham cargo.
+# Ordene os dados pelo nome do funcionario
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F INNER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+ORDER BY F.Nom_Func;
+
+# Recupere o nome do funcionario e o cargo que possui e sua formação escolar. 
+# Mostre todos os funcionarios.
+SELECT F.Nom_Func, C.Nom_Cargo, FE.Nom_Formacao
+FROM Funcionario F INNER JOIN Cargo C ON F.Cod_Cargo = C.Cod_Cargo
+INNER JOIN Formacao_Escolar FE ON F.Cod_Formacao = FE.Cod_Formacao;
+
+-- Fazer os exercícios
+
+# LEFT OUTER JOIN - Veja a diferença para o INNER JOIN
+
+# Recupere o nome do funcionario e o cargo que possui. 
+# Mostre todos os funcionários mesmo que não tenham cargo definidos
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F LEFT OUTER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+ORDER BY F.Nom_Func;
+
+Faça os exercicios propostos. 
+
+# RIGHT OUTER JOIN - Veja a diferença para o LEFT OUTER JOIN
+
+# Recupere o nome do funcionario e o cargo que possui. Mostre todos os cargos mesmo que não tenham funcionarios vinculados
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F RIGHT OUTER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+ORDER BY F.Nom_Func;
+
+# Atenção: Toda query com LEFT OUTER JOIN pode ser reescrita usando-se RIGTH OUTER JOIN e vice-versa. 
+
+Faça o exercicio proposto. 
+
+FULL OUTER JOIN:
+
+# Recupere o nome do funcionario e o cargo que possui. Mostre todos os funcionários e todos os cargos cadastrados.
+# O comando abaixo não funciona no MySQL:
+Solução:
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F FULL OUTER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+ORDER BY F.Nom_Func;
+
+# Simulando o FULL OUTER JOIN no MySQL com uso do UNION
+Solução:
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F LEFT OUTER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+UNION 
+SELECT F.Nom_Func, C.Nom_Cargo
+FROM Funcionario F RIGHT OUTER JOIN Cargo C 
+ON F.Cod_Cargo = C.Cod_Cargo
+ORDER BY Nom_Func;
+
+Faça o exercicio proposto. 
+
+
+
+
+
+
+
+
+

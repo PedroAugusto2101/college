@@ -1,0 +1,30 @@
+2)
+select nom_func 
+from funcionario
+where cod_func_supervisor is null
+and val_salario between 1000 and 5000
+order by dta_nascimento;
+
+3)
+select d.nom_departamento, f.nom_func
+from funcionario f right outer join lotacao l 
+on f.cod_func = l.cod_func
+right outer join departamento d 
+on l.cod_departamento = d.cod_departamento;
+
+4)
+select f.nom_func, p.nom_projeto, te.num_total_horas, pt.nom_produto, pi.num_quantidade, pe.val_total_pedido, fe.nom_formacao, c.nom_cargo
+from funcionario f inner join trabalha_em te 
+on f.cod_func = te.cod_func
+inner join projeto p
+on te.cod_projeto = p.cod_projeto
+inner  join pedido pe
+on f.cod_func = pe.cod_func
+inner join pedido_itens pi
+on pe.cod_pedido = pi.cod_pedido
+inner join produto pt
+on pi.cod_produto = pt.cod_produto
+inner join formacao_escolar fe
+on f.cod_formacao = fe.cod_formacao
+inner join cargo c 
+on f.cod_cargo = c.cod_cargo;
