@@ -1,0 +1,378 @@
+QUESTÃO 01
+/* Faça um programa que pergunte o preço de cinco chocolates
+e informe qual produto você deve escolher, sabendo que a decisão
+será pelo mais caro. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+	
+    int i, n_maior = 0;
+    float preco_choco[5], maior_valor = 0;
+	
+    for (i = 0; i < 5; i++)
+    {
+        printf("Digite o preço do chocolate %d:\n", i + 1);
+        scanf("%f", &preco_choco[i]);
+		
+        if (preco_choco[i] > maior_valor)
+        {
+            maior_valor = preco_choco[i];
+            n_maior = i + 1;
+        }
+    }
+	
+    printf("O chocolate mais caro é o %d, com o valor de R$%.2f\n", n_maior, maior_valor);
+}
+
+
+QUESTÃO 02
+/* Faça um Programa que leia três números e mostre-os
+ em ordem crescente. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    int na, nb, nc;
+
+    printf("Digite 3 nÚmeros:\n");
+    scanf("%d %d %d", &na, &nb, &nc);
+    if (na > nc) {
+        int tmp = nc;
+        nc = na;
+        na = tmp;
+    }
+    if (na> nb) {
+        int tmp = nb;
+        nb = na;
+        na = tmp;
+    }
+    if (nb > nc) {
+        int tmp = nc;
+        nc = nb;
+        nb = tmp;
+    }
+    printf("Os números digitados em ordem crescente: %d %d %d", na, nb, nc);
+}
+
+
+QUESTÃO 03
+/* Faça um Programa que pergunte em que turno você trabalha.
+Peça para digitar M-Manhã ou T-Tarde ou C-Dia Completo.
+Imprima a mensagem "Trabalho só pela manhã!", "Trabalho só a tarde!"
+ou "Trabalho o dia todo!" ou "Trabalho em outro horário!", conforme o caso. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    char letra;
+    
+    printf("Digite o turno em que você trabalha (M-Manhã, T-Tarde, C-Dia Completo, O-Outro Horário): \n");
+	scanf("%c", &letra);
+	
+	if (letra == 'M' || letra == 'm'){
+		printf("\nTrabalho só pela manhã!");
+	}
+	else if (letra == 'T' || letra == 't'){
+		printf("\nTrabalho só a tarde!");
+	}
+	else if (letra == 'C' || letra == 'c'){
+		printf("\nTrabalho o dia todo!");
+	}
+	else if (letra == 'O' || letra == 'o'){
+		printf("\nTrabalho em outro horário!");
+	}
+}
+
+
+QUESTÃO 04
+/* Faça um Programa que leia um vetor de 10 caracteres,
+e diga quantas vogais foram lidas. Imprima as vogais e as consoantes. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    int i, cont_vogal = 0;
+    char vetchar[10];
+    
+    for (i = 0; i < 10; i++) {
+    	printf("Digite um caractere:");
+    	scanf(" %c", &vetchar[i]);
+    	
+    	if (vetchar[i] == 'a' || vetchar[i] == 'A' ||
+		vetchar[i] == 'e' || vetchar[i] == 'E' ||
+		vetchar[i] == 'i' || vetchar[i] == 'I' ||
+		vetchar[i] == 'o' || vetchar[i] == 'O' ||
+		vetchar[i] == 'u' || vetchar[i] == 'U') {
+			cont_vogal++;
+		}
+	}
+		
+	for (i = 0; i < 10; i++) {
+		if(vetchar[i] == 'a' || vetchar[i] == 'A' ||
+	vetchar[i] == 'e' || vetchar[i] == 'E' ||
+	vetchar[i] == 'i' || vetchar[i] == 'I' ||
+	vetchar[i] == 'o' || vetchar[i] == 'O' ||
+	vetchar[i] == 'u' || vetchar[i] == 'U'){
+			printf("\nVogal: %c", vetchar[i]);
+	}
+		else{
+			printf("\nConsoante: %c", vetchar[i]);
+		}
+	}
+	
+	
+	printf("\nO número de vogais foi de: %d vogais/vogal.", cont_vogal);
+}
+
+
+QUESTÃO 05
+/* Faça um Programa que leia um vetor de 5 números inteiros,
+mostre a soma e a multiplicação por 4 de cada número. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    int i, n_int[5];
+    
+    for (i=0; i<5; i++) {
+    	printf("Digite um número: ");
+    	scanf("%d", &n_int[i]);
+	}
+	
+	for (i=0; i<5; i++) {
+		printf("\n\nA soma por 4 do %dº número: %d", i+1, n_int[i]+4);
+		printf("\nA multipllicação por 4 do %dº número: %d", i+1, n_int[i]*4);
+	}
+}
+
+
+QUESTÃO 06
+/* Faça um programa que leia um vetor de 10 posições e
+verifique se existem valores iguais e os escreva na tela. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+	int i, x, vet[10], cont=0;
+	
+	for (i=0; i<10; i++){
+		printf("Digite o valor da posição %d: ", i+1);
+		scanf("%d", &vet[i]);
+	}
+	
+	for (i=0; i<10; i++){
+		for (x=i+1; x<10; x++){
+			if (vet[i] == vet[x]){
+				printf("\nO valor %d se repete!", vet[i]);
+			}
+		}
+	}
+}
+
+
+QUESTÃO 07
+/* Faça um programa que lê duas palavras do teclado e diz
+se elas são iguais ou diferentes. O programa deve dizer
+ainda se alguma das palavras digitadas é igual a "papagaio". */
+
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    char palavra_1[20], palavra_2[20];
+    
+    printf("Digite a primeira palavra: ");
+    scanf("%s", &palavra_1);
+    printf("Digite a segunda palavra: ");
+    scanf(" %s", &palavra_2);
+    
+    if(strcmp(palavra_1,palavra_2)==0) {
+    	printf("As palavras são iguais!");
+	}
+	
+	if(strcmp(palavra_1,"Papagaio") == 0 ||strcmp(palavra_1,"papagaio") == 0) {
+		printf("\nA primeira palavra é igual a 'Papagaio'.");
+	}
+	
+	if(strcmp(palavra_2,"Papagaio") == 0 ||strcmp(palavra_2,"papagaio") == 0) {
+		printf("\nA segunda palavra é igual a 'Papagaio'.");
+	}
+	
+}
+
+
+QUESTÃO 08
+/* Faça um programa que lê uma matriz de 3 x 3 elementos usando
+um comando for, multiplica cada elemento por 5 e imprime o resultado. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    int i, j, m[3][3];
+    
+    printf("Digite os elementos da matriz.\n");
+    
+    for(i=0; i<3; i++)
+	{
+    	for(j=0; j<3; j++)
+		{
+    		printf("Digite os elementos [%d][%d]: ", i, j);
+    		scanf("%d",&m[i][j]);
+		}
+	}
+	
+	printf("\nMatriz multiplicada por 5:\n");
+	
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			m[i][j] *= 5;
+			printf("%d ", m[i][j]);
+		}
+		printf("\n");
+	}
+    	
+}
+
+
+QUESTÃO 09
+/* Faça um programa que lê um vetor de 3 elementos e uma matriz de 3 x 3 elementos.
+Em seguida o programa deve fazer a multiplicação do vetor pelas colunas da matriz. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    int i, j, m[3][3], v[3];
+    
+    printf("Digite os elementos do vetor.\n");
+    
+    for(i=0; i<3; i++)
+	{
+    	printf("Vetor [%d] = ", i+1);
+    	scanf("%d", &v[i]);
+	}
+	
+	printf("\nDigite os elementos da matriz:\n");
+	
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			printf("Matriz [%d] [%d] = ", i+1, j+1);
+			scanf("%d", &m[i][j]);
+		}
+	}
+    
+    printf("\nValores iniciais:\n");
+    printf("\nVetor:");
+    
+    for(i=0; i<3; i++)
+	{
+    	printf("%d ", v[i]);
+	}
+	printf("\n\n");
+    
+    printf("Matriz:\n");
+    for(i=0; i<3; i++)
+	{
+    	for(j=0; j<3; j++)
+		{
+    		printf("%d ", m[i][j]);
+		}
+		printf("\n");
+	}
+	
+	printf("\nValores multiplicados:\n\n");
+	
+	for(i=0; i<3; i++)
+	{
+    	for(j=0; j<3; j++)
+		{
+    		m[i][j] = v[i] * m[i][j];
+		}
+	}
+	
+    for(i=0; i<3; i++)
+	{
+    	for(j=0; j<3; j++)
+		{
+    		printf("%d ", m[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+
+QUESTÃO 10
+/* Faça um programa que receba do usuário dois vetores, A e B, com 10 números inteiros cada.
+Crie um novo vetor denominado C calculando C = A - B. Mostre na tela os dados do vetor C. */
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() 
+{
+    setlocale(LC_ALL, "Portuguese");
+    
+    int i, va[10], vb[10], vc[10];
+    
+    printf("Digite dez números inteiros para o vetor A\n");
+    
+    for(i=0; i<10; i++)
+	{
+		printf("Digite o %dº número do vetor A: ", i+1);
+		scanf("%d", &va[i]);
+	}
+	
+	printf("\nDigite dez números inteiros para o vetor B\n");
+    
+    for(i=0; i<10; i++)
+	{
+		printf("Digite o %dº número do vetor B: ", i+1);
+		scanf("%d", &vb[i]);
+	}
+	
+	printf("\nO vetor C (A - B) é igual a:");
+	
+	for(i=0; i<10; i++)
+	{
+		printf("\nA%d - B%d = %d", i+1, i+1, va[i] - vb[i]);
+	}
+}
